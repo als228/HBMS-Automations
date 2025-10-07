@@ -14,8 +14,8 @@ import pandas as pd
 from google.colab import files
 
 # Replace with your API key and list ID
-API_KEY = "fLxsuQqn0zETbT1WhmP/R6h96LWk1QlFwfWki8bQ/8SiOsA3Z5ds+1doGqNB8KC8zJtqbhgwI/UzHzjHkneQ101VQe8XPPbPp3Z2q/pD5JJK0VKu3gHX6gqF1NrVmb8V5GjjTAqnnWTkVTmQkJsLRA=="
-LIST_ID = "4c9b570bf1ef3bc292ce362c8fd65cc0"
+API_KEY = "###"
+LIST_ID = "###"
 CUSTOM_FIELD_KEY = "[ZipCode]"  # Ensure this is the correct key from API
 
 # Initialize the Subscriber object with API key authentication
@@ -30,10 +30,6 @@ print()
 # select the file and change it
 sales_data = pd.read_excel(uploaded_files[0])
 sales_data = sales_data.iloc[24:1000, :5]
-
-# change the header to normal header
-# sales_data.columns = sales_data.iloc[0]
-# sales_data = sales_data.drop(sales_data.index[0])
 
 # drop values that are N/A for name
 sales_data = sales_data.dropna(subset=['CUSTOMER EMAIL'])
